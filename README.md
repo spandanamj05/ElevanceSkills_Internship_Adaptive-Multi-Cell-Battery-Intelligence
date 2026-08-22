@@ -76,51 +76,7 @@ Simulation
 
 Wokwi
 
-3. System Architecture
-
-                    ┌──────────────────────┐
-                    │   4-Cell Battery     │
-                    │      Simulation      │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │        ESP32         │
-                    │  Voltage Acquisition │
-                    └──────────┬───────────┘
-                               │
-             ┌─────────────────┼─────────────────┐
-             │                 │                 │
-             ▼                 ▼                 ▼
-     ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-     │   Battery    │  │    Safety    │  │     HMI      │
-     │  Intelligence│  │    Kernel    │  │     LCD      │
-     └──────┬───────┘  └──────┬───────┘  └──────────────┘
-            │                 │
-            │          ┌──────┴──────┐
-            │          │ Relay / LED │
-            │          │ / Buzzer    │
-            │          └─────────────┘
-            │
-            ▼
-     ┌──────────────────┐
-     │   Wi-Fi + Blynk  │
-     │      IoT Cloud   │
-     └────────┬─────────┘
-              │
-              ▼
-     ┌──────────────────────┐
-     │ Executive Dashboard  │
-     │ • Cell Voltages      │
-     │ • Battery Health     │
-     │ • Risk Level         │
-     │ • System Mode        │
-     │ • Fault Status       │
-     │ • Relay Status       │
-     │ • Trends             │
-     └──────────────────────┘
-
-4. Task-wise Development
+3. Task-wise Development
 
 Task 1 — Adaptive Multi-Cell Battery Intelligence
 
@@ -248,25 +204,8 @@ Task 6 — Executive Battery Intelligence Dashboard
 
 Objective: Present battery information in a clear, executive-level monitoring interface.
 
-Dashboard includes:
 
-┌──────────┬──────────┬──────────┬──────────┐
-│  Cell 1  │  Cell 2  │  Cell 3  │  Cell 4  │
-├──────────┴──────────┴──────────┴──────────┤
-│              Average Voltage              │
-├──────────────────┬────────────────────────┤
-│  Battery Health  │       Risk Level       │
-├──────────────────┼────────────────────────┤
-│ Recommendation    │      Relay Status      │
-├──────────────────┼────────────────────────┤
-│  System Mode      │      Fault Status      │
-├──────────────────┴────────────────────────┤
-│            Voltage Trends                  │
-├────────────────────────────────────────────┤
-│ Wi-Fi Status       │       RSSI             │
-└────────────────────────────────────────────┘
-
-5. Hardware & Simulation
+4. Hardware & Simulation
 
 Controller
 
@@ -292,7 +231,7 @@ Simulation Platform
 
 Wokwi
 
-6. Software & Technologies
+5. Software & Technologies
 
 Programming
 └── Embedded C/C++
@@ -315,7 +254,7 @@ Libraries
 ├── WiFi
 └── BlynkSimpleEsp32
 
-7. Repository Structure
+6. Repository Structure
 
 Each task is kept separately so that the evaluator can run and inspect the tasks independently.
 
@@ -356,7 +295,7 @@ Battery-Intelligence-Project/
 └── Report/
     └── Internship_Project_Report.pdf
 
-8. Testing & Demonstration
+7. Testing & Demonstration
 
 The system was tested by changing the simulated cell inputs and observing the resulting system behaviour.
 
@@ -397,7 +336,7 @@ DEGRADED / FAILSAFE / SHUTDOWN
         ↓
 Fault displayed locally and on Blynk
 
-9. Evidence
+8. Evidence
 
 The project evidence includes:
 
@@ -417,7 +356,7 @@ Voltage trend visualization
 
 The complete evidence and explanations are provided in the internship report.
 
-10. Important Security Note
+9. Important Security Note
 
 Do not upload real Blynk authentication tokens to a public GitHub repository.
 
@@ -427,7 +366,7 @@ Before publishing the source code, replace credentials such as:
 
 If a real token has already been exposed publicly, regenerate it in Blynk before submitting the repository.
 
-11. Project Outcome
+10. Project Outcome
 
 The completed project demonstrates the progression from embedded sensing to intelligent battery monitoring and cloud-based visualization.
 
@@ -453,7 +392,7 @@ Blynk IoT telemetry
 
 Executive dashboard visualization
 
-12. Project Report
+11. Project Report
 
 The complete internship report contains the detailed documentation, implementation activities, screenshots, evidence, challenges, solutions, outcomes and learning results for the project.
 
